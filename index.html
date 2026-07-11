@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSFS e.V. – Kongregation der Missionare des Hl. Franz von Sales</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- LANGUAGE BAR -->
+    <div class="lang-bar">
+        <span>&#127758; <span data-i18n="welcome">Willkommen bei MSFS Deutschland</span></span>
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="setLang('de')">DE</button>
+            <button class="lang-btn" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('it')">IT</button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-info">
+            <span>&#128205; Bergstrasse 4, 87466 Oy-Mittelberg, Deutschland</span>
+            <span>
+                <a href="mailto:gamsfs2025@gmail.com">&#9993; gamsfs2025@gmail.com</a>
+                &nbsp;|&nbsp;
+                <a href="tel:+4915129052589">&#128222; +49 151 29052589</a>
+            </span>
+        </div>
+        <div class="german-strip"></div>
+        <nav>
+            <a href="#home" class="nav-logo">
+                <img src="assets/logo.png" alt="MSFS Logo" />
+                <div class="nav-logo-text">
+                    <div class="org-name">Kongregation der Missionare des Hl. Franz von Sales (MSFS) e.V.</div>
+                    <div class="org-short">MSFS e.V. Deutschland</div>
+                </div>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">&#220;ber Uns</a></li>
+                <li><a href="#history" data-i18n="nav_history">Geschichte</a></li>
+                <li><a href="#mission" data-i18n="nav_mission">Mission</a></li>
+                <li><a href="#provinces" data-i18n="nav_provinces">Provinzen</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projekte</a></li>
+                <li><a href="#gallery" data-i18n="nav_gallery">Galerie</a></li>
+                <li><a href="#ourfathers" data-i18n="nav_fathers">Unsere V&#228;ter</a></li>
+                <li><a href="#contact" class="btn-contact" data-i18n="nav_contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-cross">&#10011;</div>
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="MSFS Logo" class="hero-logo">
+            <div class="hero-eyebrow" data-i18n="hero_eyebrow">Kongregation der Missionare &bull; Deutschland</div>
+            <h1 class="hero-title">
+                <span data-i18n="hero_title1">Missionare des</span><br>
+                <span style="color:var(--gold)" data-i18n="hero_title2">Hl Franz von Sales</span>
+            </h1>
+            <div class="hero-orgname">Kongregation der Missionare des Hl. Franz von Sales (MSFS) e.V.</div>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Eingetragener gemeinn&#252;tziger Verein &bull;
+                Deutschland</p>
+            <div class="hero-quote">
+                &#8222;Tue alles durch Liebe und nichts durch Zwang. Die Liebe vermag mehr als die Gewalt.&#8220;
+                <br><em>&mdash; Hl. Franz von Sales</em>
+            </div>
+            <div class="hero-buttons">
+                <a href="#about" class="btn-primary" data-i18n="hero_btn1">Mehr erfahren</a>
+                <a href="#contact" class="btn-outline" data-i18n="hero_btn2">Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            &#10022; Willkommen bei MSFS Deutschland &nbsp;&nbsp;&nbsp; &#10022; Kongregation der Missionare des Hl.
+            Franz von Sales (MSFS) e.V. &nbsp;&nbsp;&nbsp; &#10022; Bergstrasse 4, 87466 Oy-Mittelberg
+            &nbsp;&nbsp;&nbsp; &#10022; Gemeinn&#252;tziger Verein e.V. &nbsp;&nbsp;&nbsp; &#10022; &#8222;Tue alles
+            durch Liebe&#8220; &mdash; Hl. Franz von Sales &nbsp;&nbsp;&nbsp; &#10022; Di&#246;zesen: Augsburg &bull;
+            Bamberg &bull; M&#252;nchen &bull; M&#252;nster &bull; Passau &bull; Regensburg &bull; W&#252;rzburg
+            &nbsp;&nbsp;&nbsp; &#10022; MSFS: 31 L&#228;nder &bull; 11 Provinzen &bull; 1233 Priester &nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in">
+                    <img src="assets/francis.png" alt="Heiliger Franz von Sales">
+                    <div class="about-badge" data-i18n="about_badge">Patron &amp; Namenspatron</div>
+                </div>
+                <div class="about-text fade-in">
+                    <span class="section-label" data-i18n="about_label">&#220;ber uns</span>
+                    <h2 class="section-title" data-i18n="about_title">Wer wir sind</h2>
+                    <div class="section-divider"></div>
+                    <p>Die <strong>Kongregation der Missionare des Heiligen Franz von Sales (MSFS)</strong> &ndash; auch
+                        bekannt als die <em>Fransalianer</em> &ndash; ist eine weltweit t&#228;tige katholische
+                        Ordensgemeinschaft, gegr&#252;ndet 1838 von Fr. Peter Marie Mermier in Annecy, Frankreich.</p>
+                    <p>In Deutschland sind wir als eingetragener gemeinn&#252;tziger Verein (<strong>e.V.</strong>)
+                        t&#228;tig und engagieren uns f&#252;r Seelsorge, Missionst&#228;tigkeit, soziale Projekte und
+                        die F&#246;rderung des geistlichen Lebens im Geiste des Heiligen Franz von Sales.</p>
+                    <p>Unser Patron, der Heilige Franz von Sales (1567&ndash;1622), war Bischof von Genf und Doktor der
+                        Kirche. Er ist bekannt f&#252;r sein Werk <em>&#8222;Anleitung zum frommen Leben&#8220;</em>
+                        (Introduction to the Devout Life).</p>
+                    <p>Als Teil der weltweiten MSFS-Gemeinschaft sind in Deutschland Missionare aus verschiedenen
+                        Provinzen Indiens t&#228;tig und dienen in mehreren deutschen Di&#246;zesen.</p>
+                    <a href="https://msfs.org" target="_blank" class="btn-primary"
+                        style="display:inline-block;margin-top:12px;">Weltweite MSFS &#8599;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GERMANY BAND -->
+    <div class="germany-band fade-in">
+        <div class="germany-flag">
+            <svg class="flag-svg" viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg">
+                <rect width="5" height="1" y="0" fill="#000" />
+                <rect width="5" height="1" y="1" fill="#DD0000" />
+                <rect width="5" height="1" y="2" fill="#FFCE00" />
+            </svg>
+        </div>
+        <h2 data-i18n="germany_title">MSFS in Deutschland</h2>
+        <p data-i18n="germany_text">Als gemeinn&#252;tziger Verein dienen wir der deutschsprachigen Gemeinschaft durch
+            Gebet, Mission und soziales Engagement &ndash; in Treue zur franzisalianischen Spiritualit&#228;t. Unsere
+            V&#228;ter kommen aus verschiedenen MSFS-Provinzen Indiens.</p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-band fade-in">
+        <div class="stat-item">
+            <div class="number">1838</div>
+            <div class="label" data-i18n="stat1">Gr&#252;ndungsjahr</div>
+        </div>
+        <div class="stat-item">
+            <div class="number">31</div>
+            <div class="label" data-i18n="stat2">L&#228;nder weltweit</div>
+        </div>
+        <div class="stat-item">
+            <div class="number">1601</div>
+            <div class="label" data-i18n="stat3">Profess-Mitglieder</div>
+        </div>
+        <div class="stat-item">
+            <div class="number">11</div>
+            <div class="label" data-i18n="stat4">Provinzen weltweit</div>
+        </div>
+    </div>
+
+    <!-- HISTORY -->
+    <section id="history">
+        <div class="container">
+            <span class="section-label">Geschichte</span>
+            <h2 class="section-title">Geschichte der MSFS-Kongregation</h2>
+            <div class="section-divider"></div>
+            <div class="history-text">
+                <h3>Gr&#252;ndung der MSFS-Kongregation</h3>
+                <p>Der Kontext der Gr&#252;ndung der Kongregation war die Franz&#246;sische Revolution, das Aufkommen
+                    des Jansenismus und die Auswanderung von Christen aus Savoyen. Die politischen Unruhen
+                    hinterlie&#223;en die Menschen in einer tiefen geistlichen Krise und gleichg&#252;ltig
+                    gegen&#252;ber ihren religi&#246;sen Pflichten. P. Peter Mermier &#252;bernahm die Aufgabe der
+                    geistlichen Erneuerung seines Volkes durch die Predigt von Pfarrmissionen.</p>
+                <div class="history-highlight">&#8222;Die Religion kann in Savoyen nur durch die Missionen wieder
+                    aufleben.&#8220; &mdash; Monsieur Favre an die Missionare in Annecy</div>
+                <p>Die MSFS-Kongregation wurde in einem historisch kritischen Moment gegr&#252;ndet, um den dreifachen
+                    Herausforderungen der Entchristlichung, dem negativen Einfluss des Jansenismus sowie der
+                    Auswanderung der verarmten Bev&#246;lkerung zu begegnen. P. Mermier war &#252;berzeugt, dass die
+                    &#8222;Predigt von Pfarrmissionen&#8220; die beste L&#246;sung sei, um Menschen zum Glauben
+                    zur&#252;ckzubringen. Pfarrmissionen bestanden aus w&#246;chentlichen Exerzitienpredigt und
+                    Familienbesuchen zur geistlichen Erneuerung der Pfarrei.</p>
+                <p>Die Kongregation wurde gegr&#252;ndet als Antwort auf den tiefen Wunsch des Heiligen Franz von Sales,
+                    eine Gesellschaft von Missionspriestern zu gr&#252;nden. Msgr. Joseph Rey brachte das Thema
+                    gegen&#252;ber P. Peter Mermier zur Sprache, der denselben Gedanken hegte. Im Jahr 1830 wurde das
+                    Institut mit La Feuillette als Mutterhaus gegr&#252;ndet.</p>
+                <p>Am 29. September 1836 gab Bischof Joseph Rey der Gemeinschaft eine vorl&#228;ufige Genehmigung. Am
+                    24. September 1838 legten sechs Missionare &ndash; Peter Mermier, Jacques Martin, Philippe Gaiddon,
+                    Joseph Cheminal, Aim&#233; Petitjean und Joseph Lavorel &ndash; das Stabilit&#228;tsgel&#252;bde ab.
+                    Am 24. Oktober 1838 erteilte Bischof Rey der Kongregation die kanonische Genehmigung &ndash; damit
+                    war sie die erste Kongregation, die den Namen des Heiligen Franz von Sales trug. Die Genehmigung des
+                    Heiligen Stuhls wurde am 22. Juni 1843 erteilt und die endg&#252;ltige Genehmigung am 19. M&#228;rz
+                    1860.</p>
+                <h3>MSFS-Mission in Indien</h3>
+                <p>Im Jahr 1845 machte sich die erste Gruppe der Missionare des Heiligen Franz von Sales auf den Weg
+                    nach Indien und landete am 8. September 1845 in Pondicherry. Sie reisten weiter nach Visakhapatnam,
+                    wo sie am 19. Februar 1846 ankamen. Am 2. Mai 1848 &#252;bergab die Kongregation f&#252;r die
+                    Evangelisierung der V&#246;lker das Vikariat Visakhapatnam an die MSFS. Bis 1850 wuchs die
+                    Visakhapatnam-Mission zu einem vollwertigen Apostolischen Vikariat heran, das sich von Yanam bis
+                    Visakhapatnam und Cuttack an der Ostk&#252;ste bis Kamptee, Amravati und Jabalpur im Norden
+                    erstreckte.</p>
+                <p>W&#228;hrend der ersten 50 Jahre kamen 62 Priester, 17 Br&#252;der, 15 Seminaristen, 140 Schwestern
+                    der St. Joseph von Annecy (SJA), 25 Schwestern des Kreuzes von Chavanod (SCC) und 14 Katechistinnen
+                    (SMMI) zur Arbeit im Vikariat. Im Jahr 1886 wurde das Vikariat Visakhapatnam in zwei Di&#246;zesen
+                    aufgeteilt: Visakhapatnam und Nagpur.</p>
+                <h3>MSFS weltweit</h3>
+                <p>Die MSFS in Indien arbeitet in sieben Provinzen: Visakhapatnam, Nagpur, Pune, S&#252;dwestindien,
+                    S&#252;dostindien, Guwahati und Dibrugarh. Die Visakhapatnam-Provinz (gegr&#252;ndet 1965) ist die
+                    &#8222;Mutterprovinz&#8220; der MSFS in Indien. Stand 2024 ist die MSFS auf f&#252;nf Kontinenten,
+                    in 31 L&#228;ndern, 11 Provinzen mit insgesamt 1233 Priestern und 368 Profess-Mitgliedern vertreten.
+                    Das MSFS-Hauptquartier befindet sich in Rom, Italien.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION -->
+    <section id="mission">
+        <div class="container">
+            <span class="section-label">Unsere Berufung</span>
+            <h2 class="section-title">Mission &amp; Apostolat</h2>
+            <div class="section-divider"></div>
+            <p style="color:#b0c4e0;max-width:650px;line-height:1.8;font-size:15px;">Im Geiste des Heiligen Franz von
+                Sales setzen wir uns ein f&#252;r Evangelisierung, Bildung, soziale Gerechtigkeit und die F&#246;rderung
+                des geistlichen Lebens.</p>
+            <div class="mission-cards">
+                <div class="mission-card fade-in"><span class="mission-icon">&#10011;</span>
+                    <h3>Seelsorge &amp; Evangelisierung</h3>
+                    <p>Wir verk&#252;nden das Evangelium mit Sanftmut. Pfarreiarbeit, Exerzitien und geistliche
+                        Begleitung stehen im Mittelpunkt.</p>
+                </div>
+                <div class="mission-card fade-in"><span class="mission-icon">&#128218;</span>
+                    <h3>Bildung &amp; Formation</h3>
+                    <p>Wir unterst&#252;tzen Schulen, Seminare und Ausbildungsprogramme f&#252;r benachteiligte
+                        Jugendliche weltweit.</p>
+                </div>
+                <div class="mission-card fade-in"><span class="mission-icon">&#129309;</span>
+                    <h3>Soziales Engagement</h3>
+                    <p>Wir helfen den Armen durch konkrete Hilfsprojekte, Nothilfe und nachhaltige
+                        Entwicklungsinitiativen.</p>
+                </div>
+                <div class="mission-card fade-in"><span class="mission-icon">&#128058;</span>
+                    <h3>Franzisalianische Spiritualit&#228;t</h3>
+                    <p>Die Spiritualit&#228;t des Hl. Franz von Sales &ndash; gepr&#228;gt von Sanftmut (Douceur)
+                        &ndash; leitet unser Gebet t&#228;glich.</p>
+                </div>
+                <div class="mission-card fade-in"><span class="mission-icon">&#127758;</span>
+                    <h3>Weltmission</h3>
+                    <p>Von Indien &#252;ber Afrika bis nach Deutschland: Die MSFS bringt die Botschaft der Liebe in alle
+                        Kulturen.</p>
+                </div>
+                <div class="mission-card fade-in"><span class="mission-icon">&#128106;</span>
+                    <h3>Jugend &amp; Familie</h3>
+                    <p>Fransalianische Jugend und Familienpastoral sind wichtige S&#228;ulen unseres Dienstes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVINCES & DIOCESES -->
+    <section id="provinces">
+        <div class="container">
+            <span class="section-label">Wirken in Deutschland</span>
+            <h2 class="section-title">Di&#246;zesen &amp; MSFS-Provinzen</h2>
+            <div class="section-divider"></div>
+            <p style="color:#555;font-size:15px;line-height:1.7;margin-bottom:30px;max-width:740px;">Die Missionare des
+                Hl. Franz von Sales sind in zahlreichen deutschen Di&#246;zesen t&#228;tig. Sie kommen aus verschiedenen
+                MSFS-Provinzen Indiens und bringen ihre Erfahrungen aus den Weltmissionen in die deutschsprachige Kirche
+                ein.</p>
+            <div class="provinces-grid">
+                <div class="province-box fade-in">
+                    <h3>&#127465;&#127466; Deutsche Di&#246;zesen, in denen MSFS t&#228;tig ist</h3>
+                    <ul class="diocese-list">
+                        <li>Augsburg</li>
+                        <li>Bamberg</li>
+                        <li>Eichst&#228;tt</li>
+                        <li>Erzbistum Bamberg</li>
+                        <li>Fulda</li>
+                        <li>Hildesheim</li>
+                        <li>M&#252;nchen und Frei&#223;ing</li>
+                        <li>M&#252;nster</li>
+                        <li>Osnabr&#252;ck</li>
+                        <li>Passau</li>
+                        <li>Regensburg</li>
+                        <li>Rottenburg-Stuttgart</li>
+                        <li>Trier</li>
+                        <li>Salzburg</li>
+                        <li>W&#252;rzburg</li>
+                    </ul>
+                </div>
+                <div class="province-box fade-in">
+                    <h3>&#127758; MSFS-Provinzen, aus denen unsere V&#228;ter kommen</h3>
+                    <ul class="province-list">
+                        <li>Dibrugarh</li>
+                        <li>East Africa</li>
+                        <li>Guwahati</li>
+                        <li>Nagpur</li>
+                        <li>Pune</li>
+                        <li>South East India</li>
+                        <li>South West India</li>
+                        <li>Visakhapatnam</li>
+                    </ul>
+                    <div
+                        style="margin-top:18px;padding:14px;background:var(--white);border-radius:4px;border-left:4px solid var(--gold);">
+                        <p style="font-size:13px;color:#555;line-height:1.6;">Die Visakhapatnam-Provinz (gegr&#252;ndet
+                            1965) ist die &#8222;Mutterprovinz&#8220; der MSFS in Indien. Die weltweite MSFS-Familie
+                            umfasst heute 11 Provinzen auf 5 Kontinenten in 31 L&#228;ndern.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+            <span class="section-label">Unser Wirken</span>
+            <h2 class="section-title">Projekte &amp; Initiativen</h2>
+            <div class="section-divider"></div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-thumb thumb-blue"><span style="z-index:1;position:relative;">&#127891;</span>
+                    </div>
+                    <div class="project-body"><span class="project-tag">Bildung</span>
+                        <h3>Schulprojekte in Missionsgebieten</h3>
+                        <p>Unterst&#252;tzung von Schulen und Bildungseinrichtungen in Indien, Afrika und anderen
+                            Missionsgebieten.</p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb thumb-gold"><span style="z-index:1;position:relative;">&#9962;</span>
+                    </div>
+                    <div class="project-body"><span class="project-tag">Pastoral</span>
+                        <h3>Gemeindeseelsorge in Deutschland</h3>
+                        <p>Aktive Mitarbeit in deutschen Pfarreien in mehreren Di&#246;zesen &ndash; Gottesdienste,
+                            Sakramente, geistliche Begleitung.</p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb thumb-green"><span style="z-index:1;position:relative;">&#128167;</span>
+                    </div>
+                    <div class="project-body"><span class="project-tag">Nothilfe</span>
+                        <h3>Humanit&#228;re Hilfsprojekte</h3>
+                        <p>Sammlung von Spenden f&#252;r Nothilfe in Katastrophengebieten und langfristige
+                            Entwicklungsprojekte.</p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb" style="background:linear-gradient(135deg,#4a1a6b,#7b2fa6);"><span
+                            style="z-index:1;position:relative;">&#128214;</span></div>
+                    <div class="project-body"><span class="project-tag">Spiritualit&#228;t</span>
+                        <h3>Exerzitien &amp; Besinnungstage</h3>
+                        <p>Einkehrtage, Exerzitien und spirituelle Kurse im Geiste des Heiligen Franz von Sales.</p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb" style="background:linear-gradient(135deg,#1a5260,#2e86ab);"><span
+                            style="z-index:1;position:relative;">&#127807;</span></div>
+                    <div class="project-body"><span class="project-tag">Nachwuchs</span>
+                        <h3>Berufungspastoral &amp; Seminarf&#246;rderung</h3>
+                        <p>Unterst&#252;tzung junger M&#228;nner auf dem Weg zum Ordensleben &ndash; F&#246;rderung von
+                            Seminaristen weltweit.</p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-thumb" style="background:linear-gradient(135deg,#5c2c0e,#a0522d);"><span
+                            style="z-index:1;position:relative;">&#129306;</span></div>
+                    <div class="project-body"><span class="project-tag">Gemeinn&#252;tzig</span>
+                        <h3>Spendenaktionen &amp; Fundraising</h3>
+                        <p>Als eingetragener gemeinn&#252;tziger Verein (e.V.) erm&#246;glichen wir Spenden mit
+                            Spendenquittung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <span class="section-label">Bilder</span>
+            <h2 class="section-title">Galerie</h2>
+            <div class="section-divider center"></div>
+            <div class="gallery-ph-grid">
+                <div class="gallery-ph-item"><span>&#128247;</span><span>Foto folgt</span></div>
+                <div class="gallery-ph-item"><span>&#128444;</span><span>Foto folgt</span></div>
+                <div class="gallery-ph-item"><span>&#128248;</span><span>Foto folgt</span></div>
+                <div class="gallery-ph-item"><span>&#9962;</span><span>Foto folgt</span></div>
+                <div class="gallery-ph-item"><span>&#127758;</span><span>Foto folgt</span></div>
+                <div class="gallery-ph-item"><span>&#10011;</span><span>Foto folgt</span></div>
+            </div>
+            <p class="gallery-note">Fotos werden in K&#252;rze hinzugef&#252;gt &bull; Photos coming soon &bull; Foto in
+                arrivo</p>
+        </div>
+    </section>
+
+    <!-- OUR FATHERS -->
+    <section id="ourfathers">
+        <div class="container">
+            <span class="section-label">Unsere geistlichen V&#228;ter</span>
+            <h2 class="section-title" style="text-align:center;">Unsere V&#228;ter</h2>
+            <div class="section-divider center"></div>
+
+            <p class="row-label">Patron &bull; Gr&#252;nder &bull; Patronin</p>
+            <div class="fathers-grid" style="margin-bottom:44px;">
+                <div class="father-card fade-in">
+                    <img src="assets/francis.png" alt="Hl. Franz von Sales" class="father-img">
+                    <h3>Hl. Franz von Sales</h3>
+                    <span class="role">Patron &amp; Namenspatron</span>
+                    <p>Bischof von Genf und Doktor der Kirche (1567&ndash;1622). Sein Wahlspruch: &#8222;Tue alles durch
+                        Liebe.&#8220; Er steht f&#252;r milde Seelsorge und den Weg der Sanftmut zu Gott.</p>
+                </div>
+                <div class="father-card fade-in">
+                    <img src="assets/peter.png" alt="Fr. Peter Marie Mermier" class="father-img"
+                        style="object-position:top;">
+                    <h3>Fr. Peter Marie Mermier</h3>
+                    <span class="role">Gr&#252;nder der MSFS (Diener Gottes)</span>
+                    <p>Gr&#252;ndete 1838 die MSFS in Annecy, Frankreich. Sein Leben war gepr&#228;gt von Missionsgeist,
+                        Demut und unerm&#252;dlicher N&#228;chstenliebe. Das Seligsprechungsverfahren l&#228;uft.</p>
+                </div>
+                <div class="father-card fade-in">
+                    <img src="assets/mariya.png" alt="Maria, Mutter der Schmerzen" class="father-img" <h3>Maria, Mutter
+                    der Schmerzen</h3>
+                    <span class="role">Patronin der Kongregation</span>
+                    <p>Maria, die Mutter der Schmerzen (Mater Dolorosa), ist die Patronin der MSFS. Sie begleitet die
+                        Missionare auf ihrem Weg und st&#228;rkt sie in Schwierigkeiten des apostolischen Lebens.</p>
+                </div>
+            </div>
+
+            <p class="row-label">Leitung &amp; F&#252;hrung</p>
+            <div class="fathers-grid fathers-row2">
+                <div class="father-card fade-in">
+                    <img src="assets/fr_johns.png" alt="Superior General" class="father-img"
+                        style="height:155px;width:120px;">
+                    <h3>Rev. Fr. Johnson Michael Kallidukil MSFS</h3>
+                    <span class="role">Superior General &bull; MSFS</span>
+                    <p>Oberster Leiter der weltweiten MSFS-Kongregation. Sein Amt umfasst die Leitung aller 11 Provinzen
+                        und die geistliche F&#252;hrung der gesamten Ordensgemeinschaft mit Sitz in Rom.</p>
+                </div>
+                <div class="father-card fade-in">
+                    <img src="assets/fr_jomon.png" alt="Fr. Dr. Jomon Emmanuel MSFS" class="father-img"
+                        style="height:155px;width:120px;object-position:top;">
+                    <h3>Fr. Dr. Jomon Emmanuel MSFS</h3>
+                    <span class="role">1. Vorsitzender des Verbands &bull; Deutschland</span>
+                    <p>Vorsitzender der Kongregation der Missionare des Hl. Franz von Sales (MSFS) e.V. in Deutschland.
+                        Verantwortlich f&#252;r die Leitung und Koordination der MSFS-Aktivit&#228;ten in Deutschland.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <span class="section-label">Schreiben Sie uns</span>
+            <h2 class="section-title">Kontakt</h2>
+            <div class="section-divider"></div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>So erreichen Sie uns</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-detail-text">
+                            <strong>Adresse</strong>
+                            <p>Kongregation der Missionare des Hl. Franz von Sales (MSFS) e.V.<br>Bergstrasse 4<br>87466
+                                Oy-Mittelberg, Deutschland</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-detail-text"><strong>E-Mail</strong><a
+                                href="mailto:gamsfs2025@gmail.com">gamsfs2025@gmail.com</a></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">&#128222;</div>
+                        <div class="contact-detail-text"><strong>Telefon</strong><a href="tel:+4915129052589">+49 151
+                                29052589</a></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">&#127758;</div>
+                        <div class="contact-detail-text"><strong>Weltweite MSFS</strong><a href="https://msfs.org"
+                                target="_blank">www.msfs.org</a></div>
+                    </div>
+                    <iframe class="map-embed" loading="lazy"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=10.4076,47.6891,10.4276,47.6991&layer=mapnik&marker=47.6941,10.4176"
+                        style="border:none;">
+                    </iframe>
+                </div>
+                <div class="contact-form fade-in">
+                    <h3>Nachricht senden</h3>
+                    <div class="form-group"><label>Name</label><input type="text"
+                            placeholder="Ihr vollst&#228;ndiger Name"></div>
+                    <div class="form-group"><label>E-Mail</label><input type="email" placeholder="ihre@email.de"></div>
+                    <div class="form-group"><label>Betreff</label><input type="text" placeholder="Worum geht es?"></div>
+                    <div class="form-group"><label>Nachricht</label><textarea
+                            placeholder="Ihre Nachricht an uns..."></textarea></div>
+                    <button class="btn-submit" onclick="sendMessage()">Nachricht senden &#9992;</button>
+                    <div id="form-msg" style="margin-top:12px;font-size:13px;color:#2d7a52;display:none;">&#10003;
+                        Vielen Dank! Wir melden uns in K&#252;rze.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="MSFS Logo">
+                <p>Kongregation der Missionare des Hl. Franz von Sales (MSFS) e.V.<br>Eingetragener gemeinn&#252;tziger
+                    Verein in Deutschland</p>
+                <div style="display:flex;gap:6px;margin-top:10px;">
+                    <div style="height:4px;flex:1;background:#000;border-radius:2px;"></div>
+                    <div style="height:4px;flex:1;background:#DD0000;border-radius:2px;"></div>
+                    <div style="height:4px;flex:1;background:#FFCE00;border-radius:2px;"></div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">&#220;ber Uns</a></li>
+                    <li><a href="#history">Geschichte</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#provinces">Provinzen</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#ourfathers">Unsere V&#228;ter</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="https://msfs.org" target="_blank">MSFS International</a></li>
+                    <li><a href="https://msfs.org/our-founder/" target="_blank">Gr&#252;nder</a></li>
+                    <li><a href="https://msfs.org/our-patrons/" target="_blank">Patron</a></li>
+                    <li><a href="https://msfs.org/provincials/" target="_blank">Provinziale</a></li>
+                    <li><a href="https://priest-finance-hub.vercel.app/" target="_blank">Finanace Hub</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="mailto:gamsfs2025@gmail.com">gamsfs2025@gmail.com</a></li>
+                    <li><a href="tel:+4915129052589">+49 151 29052589</a></li>
+                    <li style="color:#7e6b00;font-size:12px;line-height:1.6;">Bergstrasse 4<br>87466
+                        Oy-Mittelberg<br>Deutschland</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kongregation der Missionare des Hl. Franz von Sales (MSFS) e.V. &bull; Deutschland &bull;
+                Alle Rechte vorbehalten</p>
+            <p style="margin-top:5px;">&#8222;Tue alles durch Liebe und nichts durch Zwang.&#8220; &mdash; Hl. Franz von
+                Sales</p>
+        </div>
+    </footer>
+
+    <script>
+        const T = {
+            de: {
+                welcome: "Willkommen bei MSFS Deutschland",
+                nav_home: "Home", nav_about: "Über Uns", nav_history: "Geschichte", nav_mission: "Mission",
+                nav_provinces: "Provinzen", nav_projects: "Projekte", nav_gallery: "Galerie",
+                nav_fathers: "Unsere Väter", nav_contact: "Kontakt",
+                hero_eyebrow: "Kongregation der Missionare · Deutschland",
+                hero_title1: "Missionare des Hl.", hero_title2: "Franz von Sales",
+                hero_subtitle: "Eingetragener gemeinnütziger Verein · Deutschland",
+                hero_btn1: "Mehr erfahren", hero_btn2: "Kontakt aufnehmen",
+                about_label: "Über uns", about_title: "Wer wir sind", about_badge: "Patron & Namenspatron",
+                germany_title: "MSFS in Deutschland",
+                germany_text: "Als gemeinnütziger Verein dienen wir der deutschsprachigen Gemeinschaft durch Gebet, Mission und soziales Engagement.",
+                stat1: "Gründungsjahr", stat2: "Länder weltweit", stat3: "Profess-Mitglieder", stat4: "Provinzen weltweit"
+            },
+            en: {
+                welcome: "Welcome to MSFS Germany",
+                nav_home: "Home", nav_about: "About Us", nav_history: "History", nav_mission: "Mission",
+                nav_provinces: "Provinces", nav_projects: "Projects", nav_gallery: "Gallery",
+                nav_fathers: "Our Fathers", nav_contact: "Contact",
+                hero_eyebrow: "Congregation of Missionaries · Germany",
+                hero_title1: "Missionaries of St.", hero_title2: "Francis de Sales",
+                hero_subtitle: "Registered Charitable Association · Germany",
+                hero_btn1: "Learn More", hero_btn2: "Get in Touch",
+                about_label: "About Us", about_title: "Who We Are", about_badge: "Patron & Namesake",
+                germany_title: "MSFS in Germany",
+                germany_text: "As a charitable association, we serve the German-speaking community through prayer, mission, and social engagement.",
+                stat1: "Year Founded", stat2: "Countries Worldwide", stat3: "Professed Members", stat4: "Provinces Worldwide"
+            },
+            it: {
+                welcome: "Benvenuti all'MSFS Germania",
+                nav_home: "Home", nav_about: "Chi Siamo", nav_history: "Storia", nav_mission: "Missione",
+                nav_provinces: "Province", nav_projects: "Progetti", nav_gallery: "Galleria",
+                nav_fathers: "I Nostri Padri", nav_contact: "Contatto",
+                hero_eyebrow: "Congregazione dei Missionari · Germania",
+                hero_title1: "Missionari di San", hero_title2: "Francesco di Sales",
+                hero_subtitle: "Associazione no-profit registrata · Germania",
+                hero_btn1: "Scopri di più", hero_btn2: "Contattaci",
+                about_label: "Chi siamo", about_title: "La nostra identità", about_badge: "Patrono e Titolare",
+                germany_title: "MSFS in Germania",
+                germany_text: "Come associazione no-profit, serviamo la comunità di lingua tedesca attraverso la preghiera, la missione e l'impegno sociale.",
+                stat1: "Anno di fondazione", stat2: "Paesi nel mondo", stat3: "Membri professi", stat4: "Province nel mondo"
+            }
+        };
+
+        function setLang(lang) {
+            const t = T[lang];
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const k = el.getAttribute('data-i18n');
+                if (t[k]) el.innerHTML = t[k];
+            });
+        }
+
+        function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+
+        // Particles
+        (function () {
+            const c = document.getElementById('particles');
+            for (let i = 0; i < 28; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.width = p.style.height = (Math.random() * 3 + 1) + 'px';
+                p.style.animationDuration = (Math.random() * 12 + 8) + 's';
+                p.style.animationDelay = (Math.random() * 12) + 's';
+                c.appendChild(p);
+            }
+        })();
+
+        // Scroll fade
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+        // Header darken
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background =
+                window.scrollY > 60 ? 'rgba(4,9,15,.99)' : 'rgba(13,36,68,.97)';
+        });
+
+        // Active nav
+        const secs = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let cur = '';
+            secs.forEach(s => { if (window.scrollY >= s.offsetTop - 140) cur = s.id; });
+            document.querySelectorAll('.nav-links a').forEach(a => {
+                a.style.color = (a.getAttribute('href') === '#' + cur) ? '#C9A84C' : '';
+            });
+        });
+
+        function sendMessage() {
+            const m = document.getElementById('form-msg');
+            m.style.display = 'block';
+            setTimeout(() => m.style.display = 'none', 5000);
+        }
+    </script>
+</body>
+
+</html>
